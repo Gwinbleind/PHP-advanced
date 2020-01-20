@@ -28,4 +28,5 @@ define("TEMPLATE_DIR", realpath('../templates/')."/");
 
 include realpath('../engine/render.php');   //Рендер
 include realpath('../engine/db.php');       //База данных
-include realpath('../engine/classes.php');  //Классы для демонстрации
+include realpath('../engine/autoload.php');  //Автозагрузчик
+spl_autoload_register([new Autoload(), 'loadClass']);   //Подключение автозагрузчика
