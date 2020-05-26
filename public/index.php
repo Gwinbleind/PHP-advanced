@@ -41,6 +41,27 @@ switch ($page) {
         $db = connectDB();
         $params['catalog'] = getCatalog($db);
         break;
+    case 'test':
+        session_start();
+        $db = connectDB();
+        $params['links'] = [
+            'style_catalog' => 'css/style.css',
+            'lato_font' => 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap',
+            'font_awesome' => 'https://use.fontawesome.com/7f8eaeebe5.css',
+        ];
+        $params['scripts'] = [
+            'vue' => [
+                'link' => 'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js',
+                'async' => '0'
+            ],
+            'feedback_vue_js' => [
+                'link' => 'js/front.js',
+                'async' => '1'
+            ]
+        ];
+        //Authorise
+        include realpath('../engine/auth.php');
+        break;
 }
 //$message = [
 //    "OK" => "Сообщение добавлено",

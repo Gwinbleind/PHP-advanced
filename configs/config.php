@@ -21,6 +21,10 @@ $params = [
             "title" => "7. Пример 3",
             "href" => "/?page=example3"
         ],
+        [
+            "title" => "Тестовая",
+            "href" => "/?page=test"
+        ],
     ]
 ];
 
