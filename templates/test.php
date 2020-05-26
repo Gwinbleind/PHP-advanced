@@ -3,7 +3,11 @@ Test page <br>
 	<form action="" method="post">
 		<input type="text" name="login" placeholder="Login">
 		<input type="password" name="pass" placeholder="Password">
-		<input type="submit" name="Log">
+		<label>
+			<input type="checkbox" name="save">
+			Save
+		</label>
+		<input type="submit" value="Login">
 	</form>
 <?else:?>
 	Привет, <?=$login?>
