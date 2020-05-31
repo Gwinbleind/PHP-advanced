@@ -13,7 +13,8 @@ function getArray($db, $query) {
     return $queryArray;
 }
 function updateRow($db, $table, $condition, $rowData) {
-    return mysqli_query($db, "UPDATE {$table} SET {$rowData} WHERE {$condition}");
+    $q = "UPDATE {$table} SET {$rowData} WHERE {$condition}";
+    return mysqli_query($db, $q);
 }
 function deleteRow($db, $table, $condition) {
     return mysqli_query($db, "DELETE FROM {$table} WHERE {$condition}");

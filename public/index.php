@@ -42,7 +42,6 @@ switch ($page) {
         $params['catalog'] = getCatalog($db);
         break;
     case 'test':
-        session_start();
         $db = connectDB();
         $params['links'] = [
             'style_catalog' => 'css/style.css',
