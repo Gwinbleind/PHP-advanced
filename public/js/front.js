@@ -189,6 +189,24 @@ const app = new Vue({
    },
    methods: {
       //TODO: переписать запросы на новый тип
+      loginRequest() {
+         alert('hi');
+         // return fetch('/?page=test', {
+         //    method: 'POST',
+         //    headers: new Headers({
+         //       'Content-type': 'application/json'
+         //    }),
+         //    body: JSON.stringify({
+         //       login: this.loginForm.Name,
+         //       pass: this.loginForm.Password,
+         //    })
+         // })
+         //    .then(response => {
+         //       if (response.ok) {
+         //          return response.json()
+         //       } else {throw new Error(`${response.status}`)}
+         //    })
+      },
       fetchRequest(url) {
          return fetch(url)
             .then(response => {
@@ -276,7 +294,7 @@ const app = new Vue({
       },
       loginClickHandler() {
          if (this.loginForm.Name !== '') {
-               return fetch(`/users/${this.loginForm.Name}`)
+               return this.loginRequest()
                // Проверка логина
                   .then(response => {
                      if (response.ok) {

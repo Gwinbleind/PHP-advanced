@@ -13,7 +13,9 @@ Test page <br>
 	Привет, <?=$login?>
 	<a href="/?page=test&logout">Logout</a>
 <?endif;?>
+<div style="height: 500px;"></div>
 <div id="root">
+<!--	<div class="button button_login div_flex" @click="loginRequest">{{logOrReg}}</div>-->
 <div class="container_horizontal div_flex">
 <?if (!$isAuth): ?>
 	<div class="div_colwrap div_flex">
@@ -27,7 +29,7 @@ Test page <br>
 		   <label class="div_flex my_account__label">E-mail:<input class="choose__box" type="email" v-model="registerForm.Mail" required></label>
 		   <label class="div_flex my_account__label">Age:<input class="choose__box" type="number" v-model="registerForm.Age" required></label>
 		</template>
-		<div class="button button_login div_flex" @click="logOrRegHandler">{{logOrReg}}</div>
+		<div class="button button_login div_flex" @click="loginClickHandler">{{logOrReg}}</div>
     </div>
 <?else:?>
 	<div>
